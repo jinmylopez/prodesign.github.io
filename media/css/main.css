@@ -1,0 +1,100 @@
+body{
+	animation: color1 30s linear infinite;
+}
+.background-think{
+	background:#609AEF
+}
+.color-think{
+	color:#609AEF
+}
+@-moz-keyframes color {
+  0% {
+    background: #e61919;
+  }
+  25% {
+    background: #80e619;
+  }
+  50% {
+    background: #19e5e6;
+  }
+  75% {
+    background: #7f19e6;
+  }
+  100% {
+    background: #e61919;
+  }
+}
+@-webkit-keyframes color {
+  0% {
+    background: #e61919;
+  }
+  25% {
+    background: #80e619;
+  }
+  50% {
+    background: #19e5e6;
+  }
+  75% {
+    background: #7f19e6;
+  }
+  100% {
+    background: #e61919;
+  }
+}
+@-o-keyframes color {
+  0% {
+    background: #e61919;
+  }
+  25% {
+    background: #80e619;
+  }
+  50% {
+    background: #19e5e6;
+  }
+  75% {
+    background: #7f19e6;
+  }
+  100% {
+    background: #e61919;
+  }
+}
+@keyframes color {
+  0% {
+    background: #e61919;
+  }
+  25% {
+    background: #80e619;
+  }
+  50% {
+    background: #19e5e6;
+  }
+  75% {
+    background: #7f19e6;
+  }
+  100% {
+    background: #e61919;
+  }
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: #fff;
+}
+.navbar-default{
+	background: rgba(0, 0, 0, 0.08);
+	border: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+.navbar-brand h1{
+	margin: 0
+}
+header .navbar{
+	margin-bottom: 0;
+}
+@media (min-width: 768px){
+	.navbar {
+    border-radius: 0;
+	}
+}
