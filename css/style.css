@@ -37,7 +37,9 @@ p {
   background-color:  #609AEF ;
 
 }
-
+.team-member{
+  text-align: center;
+}
 
 .parallax-image{
   width: 100%;
@@ -50,7 +52,7 @@ p {
 
 
 .parallax-container {
-  min-height: 380px;
+  padding: 5% 0px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -93,9 +95,7 @@ footer.page-footer {
 
 
 /* Estilos de los botones sociale*/
-.buttons-social ul{
-    overflow: auto;
-}
+
 
 .buttons-social ul li {
   display: inline-block;
