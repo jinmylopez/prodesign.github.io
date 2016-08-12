@@ -12,19 +12,20 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="navbar">
+  <div class="navbar-fixed">
   <nav class="navbar-capuly" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="" class="hide-on-med-and-down brand-logo left">Think!</a>
+      <a id="logo-container" href="" class=" brand-logo left">Think!</a>
       <ul class="right hide-on-med-and-down navbar-right">
-        <li><a href="#">Sacar cita</a></li>
+        <li><a class="modal-trigger" href="#modal1">Sacar cita</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#">Nosotros</a></li>
         <li><a href="#">Contáctanos</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="">Sacar cita</a></li>
+        <li class="logo-mobile"><a id="" href="" class=" blue darken-1">Think!</a></li>
+        <li><a class="modal-trigger" href="#modal1">Sacar cita</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#">Nosotros</a></li>
         <li><a href="#">Contáctanos</a></li>
@@ -34,7 +35,7 @@
   </nav>
   </div>
   <div class="video-slider">
-    <iframe width="100%" height="550" src="https://www.youtube.com/embed/3wPeND2gvqc" frameborder="0" allowfullscreen></iframe>
+    <video class="Video" width="100%"  loop="" controls=""><source src="https://static.platzi.com/static/7a8923a28f2c8458d615a3f8743d8339.mp4" type="video/mp4"><source src="https://static.platzi.com/static/445a5b8d527e127617459c8d271f7ffa.webm" type="video/webm"></video>
   </div>
   <div id="index-banner " class="parallax-container parallax-banner ">
     <div class="section no-pad-bot">
@@ -47,8 +48,18 @@
               <p>Agencia publicitaria que se caracteriza por la juventud de sus miembros, por utilizar conceptos no convencionales y por realizar estudios de mercado minuciosos para el buen tratamiento del mensaje.</p>
             </div>
             <div class="row center">
-          <a class="waves-effect waves-light btn-large">Haz una cita</a>
-          
+          <a class="waves-effect waves-light btn-large deep-orange modal-trigger" href="#modal1">Sacar cita</a>
+
+              <!-- Modal Structure -->
+              <div id="modal1" class="modal bottom-sheet modal-fixed-footer">
+                <div class="modal-content">
+                  <h4>Modal Header</h4>
+                  <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                </div>
+              </div>
 
         </div>
           </div>  
@@ -317,6 +328,10 @@
   <script>
     $(document).ready(function() {
     $('select').material_select();
+      $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+      });
   });
   </script>
 

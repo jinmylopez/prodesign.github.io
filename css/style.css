@@ -17,9 +17,9 @@ hr {
     height: 0;
 }
 
-nav ul a,
-nav .brand-logo {
-  color: white;
+
+#nav-mobile .logo-mobile a{
+  color: white!important;
 }
 
 p {
@@ -162,7 +162,6 @@ footer.page-footer {
 /*navbar capuly*/
 .navbar-capuly{
   color: white !important;
-  box-shadow: none;
   background: #609AEF;
 }
 
