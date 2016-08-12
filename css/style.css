@@ -1,7 +1,11 @@
 /* Estilos Capuly */
 
-
-
+.background-think{
+  background:#609AEF
+}
+.color-think{
+  color:#609AEF
+}
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -27,11 +31,10 @@ p {
 }
 /*Banner*/
 .parallax-banner{
-  min-height: 550px !important;
-
+ text-align: center;
 }
 .parallax-fondo{
-  background-color:  #ffab40 ;
+  background-color:  #609AEF ;
 
 }
 
@@ -159,9 +162,8 @@ footer.page-footer {
 /*navbar capuly*/
 .navbar-capuly{
   color: white !important;
-  background-color: #ffab40;
   box-shadow: none;
-
+  background: #609AEF;
 }
 
 
