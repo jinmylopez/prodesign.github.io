@@ -34,65 +34,58 @@
     </div>
   </nav>
   </div>
-  <div class="slider-container">
-  <div class="slider-control left inactive"></div>
-  <div class="slider-control right"></div>
-  <ul class="slider-pagi"></ul>
-  <div class="slider">
-    <div class="slide slide-0 active">
-      <div class="slide__bg"></div>
-      <div class="slide__content">
-        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-        </svg>
-        <div class="slide__text">
-          <h2 class="slide__text-heading">Photo 1</h2>
-          <p class="slide__text-desc"></p>
-          <a class="slide__text-link">Project link</a>
-        </div>
-      </div>
-    </div>
-    <div class="slide slide-1 ">
-      <div class="slide__bg"></div>
-      <div class="slide__content">
-        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-        </svg>
-        <div class="slide__text">
-          <h2 class="slide__text-heading">Photo 2</h2>
-          <p class="slide__text-desc"></p>
-          <a class="slide__text-link">Project link</a>
-        </div>
-      </div>
-    </div>
-    <div class="slide slide-2">
-      <div class="slide__bg"></div>
-      <div class="slide__content">
-        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-        </svg>
-        <div class="slide__text">
-          <h2 class="slide__text-heading">Photo 3</h2>
-          <p class="slide__text-desc"></p>
-          <a class="slide__text-link">Project link</a>
-        </div>
-      </div>
-    </div>
-    <div class="slide slide-3">
-      <div class="slide__bg"></div>
-      <div class="slide__content">
-        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-        </svg>
-        <div class="slide__text">
-          <h2 class="slide__text-heading">Photo 4</h2>
-          <p class="slide__text-desc"></p>
-          <a class="slide__text-link">Project link</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  <div id="carousel">
+  
+  <input checked type=radio name=slider id="slide1" />
+  <input type=radio name=slider id="slide2" />
+  <input type=radio name=slider id="slide3" />
+  <input type=radio name=slider id="slide4" />
+  <input type=radio name=slider id="slide5" />
+    
+  <div id="slides">
+
+    <div id="overflow">
+  
+      <div class="inner">
+    
+        <article>
+          <div class="info"><h3>Imagen de ejemplo 1</h3> por <a href="#">Autor</a></div>
+          <img src="http://csscience.com/responsiveslidercss3/CouldDragonByBjzaba.png" />
+        </article>
+      
+        <article>
+          <div class="info"><h3>Imagen de ejemplo 2</h3> por <a href="#">Autor</a></div>
+          <img src="http://csscience.com/responsiveslidercss3/MountainFortByBjzaba.png" />
+        </article>
+      
+        <article>
+          <div class="info"><h3>Imagen de ejemplo 3</h3> por <a href="#">Autor</a></div>
+          <img src="http://csscience.com/responsiveslidercss3/MountainOutpostByBjzaba.png" />
+        </article>
+      
+        <article>
+          <div class="info"><h3>Imagen de ejemplo 4</h3> por <a href="#">Autor</a></div>
+          <img src="http://csscience.com/responsiveslidercss3/CliffsByBjzaba.png" />
+        </article>
+      
+        <article>
+          <div class="info"><h3>Imagen de ejemplo 5</h3> por <a href="#">Autor</a></div>
+          <img src="http://csscience.com/responsiveslidercss3/HillFortByBjzaba.png" />
+        </article>
+      
+      </div> <!-- .inner -->
+    </div> <!-- #overflow -->
+  </div> <!-- #slides -->
+  
+  <div id="active">
+    <label for="slide1"></label>
+    <label for="slide2"></label>
+    <label for="slide3"></label>
+    <label for="slide4"></label>
+    <label for="slide5"></label>
+  </div> <!-- #active -->
+  
+ </div> <!-- #carousel -->
 
   <div id="slider">
     <figure>
