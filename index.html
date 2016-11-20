@@ -12,314 +12,280 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="navbar-fixed">
-  <nav class="navbar grey lighten-3 text-darken-2" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="" class=" brand-logo left"><img src="images/tang-logo.png" alt></a>
-      <ul class="right hide-on-med-and-down navbar-right">
-        <li><a class="modal-trigger" href="#modal1">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#">Contáctanos</a></li>
-      </ul>
+  <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+  <script src="js/jssor.slider-21.1.6.mini.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
 
-      <ul id="nav-mobile" class="side-nav blue-grey lighten-4">
-        <li class="logo-mobile"><a id="" href="" class=" grey darken-4"><img src="images/tang-logo-2-min.png" alt></a></li>
-        <li><a class="modal-trigger" href="#modal1">Sercicios</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#">Contáctanos</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse right"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  </div>
-  <div id="carousel">
-  
-  <input checked type=radio name=slider id="slide1" />
-  <input type=radio name=slider id="slide2" />
-  <input type=radio name=slider id="slide3" />
-  <input type=radio name=slider id="slide4" />
-  <input type=radio name=slider id="slide5" />
-    
-  <div id="slides">
+      var jssor_1_SlideoTransitions = [
+      [{b:-1,d:1,o:-1},{b:0,d:1000,o:1}],
+      [{b:1900,d:2000,x:-379,e:{x:7}}],
+      [{b:1900,d:2000,x:-379,e:{x:7}}],
+      [{b:-1,d:1,o:-1,r:288,sX:9,sY:9},{b:1000,d:900,x:-1400,y:-660,o:1,r:-288,sX:-9,sY:-9,e:{r:6}},{b:1900,d:1600,x:-200,o:-1,e:{x:16}}]
+      ];
 
-    <div id="overflow">
-  
-      <div class="inner">
-    
-        <article>
-          <div class="info"><h3>Imagen de ejemplo 1</h3> por <a href="#">Autor</a></div>
-          <img src="http://csscience.com/responsiveslidercss3/CouldDragonByBjzaba.png" />
-        </article>
-      
-        <article>
-          <div class="info"><h3>Imagen de ejemplo 2</h3> por <a href="#">Autor</a></div>
-          <img src="http://csscience.com/responsiveslidercss3/MountainFortByBjzaba.png" />
-        </article>
-      
-        <article>
-          <div class="info"><h3>Imagen de ejemplo 3</h3> por <a href="#">Autor</a></div>
-          <img src="http://csscience.com/responsiveslidercss3/MountainOutpostByBjzaba.png" />
-        </article>
-      
-        <article>
-          <div class="info"><h3>Imagen de ejemplo 4</h3> por <a href="#">Autor</a></div>
-          <img src="http://csscience.com/responsiveslidercss3/CliffsByBjzaba.png" />
-        </article>
-      
-        <article>
-          <div class="info"><h3>Imagen de ejemplo 5</h3> por <a href="#">Autor</a></div>
-          <img src="http://csscience.com/responsiveslidercss3/HillFortByBjzaba.png" />
-        </article>
-      
-      </div> <!-- .inner -->
-    </div> <!-- #overflow -->
-  </div> <!-- #slides -->
-  
-  <div id="active">
-    <label for="slide1"></label>
-    <label for="slide2"></label>
-    <label for="slide3"></label>
-    <label for="slide4"></label>
-    <label for="slide5"></label>
-  </div> <!-- #active -->
-  
- </div> <!-- #carousel -->
+      var jssor_1_options = {
+        $AutoPlay: true,
+        $SlideDuration: 800,
+        $SlideEasing: $Jease$.$OutQuint,
+        $CaptionSliderOptions: {
+          $Class: $JssorCaptionSlideo$,
+          $Transitions: jssor_1_SlideoTransitions
+        },
+        $ArrowNavigatorOptions: {
+          $Class: $JssorArrowNavigator$
+        },
+        $BulletNavigatorOptions: {
+          $Class: $JssorBulletNavigator$
+        }
+      };
 
-  <div id="slider">
-    <figure>
-      <img src="images/fachada/01-min.png" alt>
-      <img src="images/fachada/01-min.png" alt>
-      <img src="images/fachada/01-min.png" alt>
-      <img src="images/fachada/01-min.png" alt>
-    </figure>
-  </div>
-  <div id="index-banner " class=" parallax-banner grey darken-4">
-    <div class="section no-pad-bot">
-      <div class="container">
+      var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
 
-        <div class="row">
+      /*responsive code begin*/
+      /*you can remove responsive code if you don't want the slider scales while window resizing*/
+      function ScaleSlider() {
+        var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+        if (refSize) {
+          refSize = Math.min(refSize, 1920);
+          jssor_1_slider.$ScaleWidth(refSize);
+        }
+        else {
+          window.setTimeout(ScaleSlider, 30);
+        }
+      }
+      ScaleSlider();
+      $(window).bind("load", ScaleSlider);
+      $(window).bind("resize", ScaleSlider);
+      $(window).bind("orientationchange", ScaleSlider);
+      /*responsive code end*/
+    });
+  </script>
+      <div class="navbar-fixed">
+        <nav class="navbar grey lighten-3 text-darken-2" role="navigation">
+          <div class="nav-wrapper container">
+            <a id="logo-container" href="" class=" brand-logo left"><img src="images/tang-logo.png" alt></a>
+            <ul class="right hide-on-med-and-down navbar-right">
+              <li><a class="" href="#jssor_1">Inicio</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#">Contáctanos</a></li>
+            </ul>
 
-          <div class="col s12 m12  desc-capuly">
-            <div class="row center">
-              <p>Por favor solicita una reunion con nosotros indicando tu correo electronico, gracias.</p>
-            </div>
-            <div class="row center">
-          <a class="waves-effect waves-light btn-large deep-orange modal-trigger" href="#modal1">Sacar cita</a>
-
-              <!-- Modal Structure -->
-              <div id="modal1" class="modal bottom-sheet modal-fixed-footer">
-                <div class="modal-content">
-                  <h4>Modal Header</h4>
-                  <p>A bunch of text</p>
-                </div>
-                <div class="modal-footer">
-                  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-                </div>
-              </div>
-
-        </div>
-          </div>  
-        </div>
-
- 
+            <ul id="nav-mobile" class="side-nav blue-grey lighten-4">
+              <li class="logo-mobile"><a id="" href="" class=" grey darken-4"><img src="images/tang-logo-2-min.png" alt></a></li>
+              <li><a class="modal-trigger" href="#modal1">Sercicios</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#">Contáctanos</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse right"><i class="material-icons">menu</i></a>
+          </div>
+        </nav>
       </div>
-    </div>
-      
 
-  </div>
+      <div class="slider-jquery bg-rock">
+
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 570px; overflow: hidden; visibility: hidden;">
+          <!-- Loading Screen -->
+          <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+          </div>
+          <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 570px; overflow: hidden;">
+            <div data-p="225.00">
+              <img data-u="image" src="img/red.png" />                
+            </div>
+            <div data-p="225.00" style="display: none;">
+              <img data-u="image" src="img/purple.png" />
+            </div>
+            <a data-u="any" href="http://www.jssor.com" style="display:none">Full Width Slider</a>
+            <div data-p="225.00" data-po="80% 55%" style="display: none;">
+              <img data-u="image" src="img/blue.png" />
+            </div>
+            <div data-p="225.00" data-po="80% 55%" style="display: none;">
+              <img data-u="image" src="img/black.png" />
+            </div>
+          </div>
+          <!-- Bullet Navigator -->
+          <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+            <!-- bullet navigator item prototype -->
+            <div data-u="prototype" style="width:16px;height:16px;"></div>
+          </div>
+          <!-- Arrow Navigator -->
+          <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
+          <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
+        </div>
+      </div>
+      <!-- Welcome -->
+      <div class="div-welcome flow-text grey darken-1 center"><h2>INVERSIONES TANG SAC</h2></div>
+      <div id="index-banner" class=" parallax-banner grey darken-4">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <div class="row">
+              <div class="col  m6">
+              <img src="images/fachada/02.png">
+              </div>  
+              <div class="col  m6">               
+                  <p class="grey-text lighten-1">Pone a su disposición sus nuevas y modernas instalaciones 
+                    para hacer de su estadía turística,negocios o trabajo,una experiencia satisfactoria, 
+                    la cual esta garantizada por la estratégica ubicación, excelente servicio personalizado, 
+                    el trato cordial, la variedad de comodidades y facilidades que sólo Tang  Hotel Ofrece.
+                  </p>                                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="servicios" class="container">
+        <div class="section">
 
 
-  <div id="servicios" class="container">
-    <div class="section">
+        </div>
+      </div>
 
-
-    </div>
-  </div>
-
-  <div id="nosotros" class="container">
-    <div class="section">
-      <div class="row">
-        <h5 class="center">Nuestro</h5>
-        <h4 class="center">Equipo</h4>
-        <div class="col s12 m4">
-            <div class="team-member">
+      <div id="nosotros" class="container">
+        <div class="section">
+          <div class="row">
+            <h5 class="center">Nuestro</h5>
+            <h4 class="center">Equipo</h4>
+            <div class="col s12 m4">
+              <div class="team-member">
                 <img src="images/team/1.jpg" class="responsive-img circle member-img" alt="">
                 <h4 class="member-name">Osar Cabada</h4>
                 <p class="member-cargo">Director de Cuentas</p>
                 <div class="col s12 member-social buttons-social ">
                   <ul class="">
-                  <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
                   </ul>
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="col s12 m4">
-            <div class="team-member">
+            <div class="col s12 m4">
+              <div class="team-member">
                 <img src="images/team/2.jpg" class="responsive-img circle member-img" alt="">
                 <h4 class="member-name">Gerardo Gonzales</h4>
                 <p class="member-cargo">Director de Medios</p>
                 <div class="col s12 member-social buttons-social ">
                   <ul class="">
-                  <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
                   </ul>
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="col s12 m4">
-            <div class="team-member">
+            <div class="col s12 m4">
+              <div class="team-member">
                 <img src="images/team/3.jpg" class="responsive-img circle member-img" alt="">
                 <h4 class="member-name">Jinmy Lopez</h4>
                 <p class="member-cargo">Director General de Arte</p>
                 <div class="col s12 member-social buttons-social ">
                   <ul class="">
+                    <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <div class="row center">
+              <h3 class="header col s12 light">Expertos en publicidad</h3>
+            </div>
+          </div>
+        </div>
+        <div class="parallax"><img src="images/background2.jpg" alt="Unsplashed background img 2"></div>
+      </div>
+
+      <div class="container">
+        <div class="section section-capuly">
+
+          <div class="row">
+            <div class="col s12 contact-capuly ">
+              <h3><i class="mdi-content-send brown-text"></i></h3>
+              <h5 class="center">Contacto</h5>
+              <h4 class="center">Tu empresa es nuestra prioridad #1</h4>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <footer class="page-footer teal">
+        <div class="container">
+          <div class="row">
+            <div class="col m6 s12">
+              <h5 class="white-text">Tang Hotel!</h5>
+              <p class="grey-text text-lighten-4">
+                Plataforma de gestion para medianas y pequeñas empresas.
+              </p>
+            </div>
+
+
+            <div class="col m6 s12" style="text-align: right">
+              <h5 class="white-text">Contáctenos</h5>
+              <ul>
+                <li><a class="white-text" href="#!">La Libertad, Trujillo</a></li>
+                <li><a class="white-text" href="#!"></a></li>
+                <li><a class="white-text" href="#!">+ 51 95796446</a></li>
+                <li><a class="white-text" href="mailto:Jcapas@unitru.edu.pe">info@tanghotel.com</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <div class="container">
+            <div class="row">
+              <hr>
+              <div class="col s12 center buttons-social">
+                <h5 class="white-text">Síguenos</h5>
+                <ul class="">
                   <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
                   <li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
                   <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-                  </ul>
-                </div>
+                  <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
+                </ul>
+              </div>
+
             </div>
+          </div>
         </div>
 
-      </div>
-    </div>
-  </div>
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h3 class="header col s12 light">Expertos en publicidad</h3>
+        <div class="footer-copyright">
+          <div class="container">
+            © 2016 Tang Hotel | Todos los Derechos Reservados
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section section-capuly">
-
-      <div class="row">
-        <div class="col s12 contact-capuly ">
-        <h3><i class="mdi-content-send brown-text"></i></h3>
-        <h5 class="center">Contacto</h5>
-        <h4 class="center">Tu empresa es nuestra prioridad #1</h4>
-          <form class="col s12">
-            <div class="row">
-            <div class="input-field col s12">
-            <input id="name" type="text" class="validate">
-            <label for="name">Nombre</label>
-            </div>
-
-            <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
-            <label for="email">Email</label>
-            </div>
-            <div class="input-field col s12">
-            <input id="name_project" type="text" class="validate">
-            <label for="name_project">Nombre de tu proyecto o idea</label>
-            </div>
-            <div class="input-field col s12 m6">
-            <input id="telefono" type="text" class="validate">
-            <label for="email">Teléfono</label>
-            </div>
-            <div class="input-field col s12 m6">
-              <select>
-                <option value="" disabled selected></option>
-                <option value="1">Trujillo </option>
-                <option value="2">Arequipa </option>
-                <option value="3">Lima </option>
-              </select>
-              <label>Ciudad</label>
-            </div>
-            <div class="input-field col s12">
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">¿Cuándo te podemos contactar?</label>
-            </div>
-            <div class="input-field col s12">
-            <textarea id="textarea1" class="materialize-textarea"></textarea>
-            <label for="textarea1">Mensaje</label>
-            </div>
-
-            <button class="btn waves-effect orange accent-2" type="submit" name="action">Enviar
-              <i class="material-icons right">send</i>
-            </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+      </footer>
 
 
+      <!--  Scripts-->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="js/materialize.min.js"></script>
+      <script src="js/init.js"></script>
 
+      <script>
+        $(document).ready(function() {
+          $('select').material_select();
+        });
+      </script>
 
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-            <div class="col m6 s12">
-                <h5 class="white-text">Tang Hotel!</h5>
-                <p class="grey-text text-lighten-4">
-                  Plataforma de gestion para medianas y pequeñas empresas.
-                </p>
-            </div>
-
-
-        <div class="col m6 s12" style="text-align: right">
-            <h5 class="white-text">Contáctenos</h5>
-            <ul>
-            <li><a class="white-text" href="#!">La Libertad, Trujillo</a></li>
-            <li><a class="white-text" href="#!"></a></li>
-            <li><a class="white-text" href="#!">+ 51 95796446</a></li>
-            <li><a class="white-text" href="mailto:Jcapas@unitru.edu.pe">info@tanghotel.com</a>
-            </li>
-
-            </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-social">
-      <div class="container">
-      <div class="row">
-        <hr>
-        <div class="col s12 center buttons-social">
-          <h5 class="white-text">Síguenos</h5>
-            <ul class="">
-            <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
-            </ul>
-        </div>
-        
-      </div>
-      </div>
-    </div>
-
-    <div class="footer-copyright">
-      <div class="container">
-      © 2016 Tang Hotel | Todos los Derechos Reservados
-      </div>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.min.js"></script>
-  <script src="js/init.js"></script>
-
-  <script>
-    $(document).ready(function() {
-    $('select').material_select();
-  });
-  </script>
-
-  </body>
-</html>
+    </body>
+    </html>
