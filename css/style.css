@@ -13,7 +13,7 @@
   padding: 1%;
   border-top: 8px solid #5a5a5a;
 }
-.container div div p{
+#index-banner div div p{
   text-align: justify;
   margin-top: 10%;
   border-left: 4px solid #a0973a;
@@ -212,11 +212,14 @@ footer.page-footer {
 
 .member-name{
   font-size: 20px;
+  font-weight: bold;
+  color: #1976D2 ;
 }
 
 .member-cargo{
-  margin-bottom: -14px !important;
-  margin-top: -12px !important;
+  margin-bottom: 0px !important;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .member-social ul li a i{
@@ -290,3 +293,48 @@ div#slider figure {
 .jssora22r.jssora22rdn { background-position: -310px -31px; }
 .jssora22l.jssora22lds { background-position: -10px -31px; opacity: .3; pointer-events: none; }
 .jssora22r.jssora22rds { background-position: -70px -31px; opacity: .3; pointer-events: none; }
+
+#room{
+  margin-top: 4%;
+}
+#room .tabs{
+  background: #f1f1f1;
+}
+#room .tabs li{
+  border-top: 2px dashed #e2e2e2;
+}
+#room div i,#servicios div i{
+  vertical-align: top;
+}
+#room div h2,#servicios div h2{
+  display: inline-block;
+  margin-top: 0;
+}
+#room .tabs .indicator {
+  background-color: #1b99d5!important;
+  height: 5px;
+}
+#room .tabs i{
+  color: #f1f1f1;
+  margin-right: 10px;
+  margin-top: 12px;
+}
+#room a{
+  color: #212121;
+}
+#room a.active, #room a.active i{
+  font-weight: bold;
+  color: #1b99d5;
+}
+#servicios .row{
+  text-align: center;
+}
+#servicios .row .col{
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+}
+#servicios .row .col p{
+  border-top: 2px dashed #ffffff;
+  background: #e4e4e4;
+}
