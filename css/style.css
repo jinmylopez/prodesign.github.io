@@ -369,3 +369,10 @@ div#slider figure {
     box-shadow: 0 0 0 12px transparent, 0 0 0 24px rgba(90, 212, 99, 0);
   }
 }
+.modal.modal-fixed-footer {
+  height: 90%;
+  max-height: 100%;
+}
+.lean-overlay{
+  height: 135%;
+}
