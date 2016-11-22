@@ -16,6 +16,10 @@
 #index-banner{
   border-top: 8px solid #5a5a5a;
 }
+#index-banner h4{
+  text-align: left;
+  font-weight: 400;
+}
 #index-banner div div p{
   text-align: justify;
   margin-top: 10%;
@@ -40,7 +44,7 @@ hr {
 }
 #logo-container img{
   width: 160px;
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 #nav-mobile .logo-mobile a{
@@ -217,6 +221,7 @@ footer.page-footer {
   font-size: 20px;
   font-weight: bold;
   color: #1976D2 ;
+  padding: 0 10px;
 }
 
 .member-cargo{
@@ -389,4 +394,7 @@ div#slider figure {
 }
 nav ul a {
     padding: 10px 15px;
+}
+.navbar-fixed i{
+  color: #fe2328!important;
 }
