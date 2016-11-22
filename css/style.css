@@ -311,10 +311,10 @@ div#slider figure {
 #room .tabs li{
   border-top: 2px dashed #e2e2e2;
 }
-#room div i,#servicios div i{
+#room div i,#servicios div i,#location div i{
   vertical-align: top;
 }
-#room div h2,#servicios div h2{
+#room div h2,#servicios div h2,#location div h2{
   display: inline-block;
   margin-top: 0;
 }
