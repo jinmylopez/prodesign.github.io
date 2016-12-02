@@ -292,3 +292,49 @@ jQuery(document).ready(function ($) {
   $(window).bind("orientationchange", ScaleSlider);
   /*responsive code end*/
 });
+
+jQuery(document).ready(function ($) {
+
+  var jssor_7_SlideoTransitions = [
+  [{b:-1,d:1,o:-1},{b:0,d:1000,o:1}],
+  [{b:1900,d:2000,x:-379,e:{x:7}}],
+  [{b:1900,d:2000,x:-379,e:{x:7}}],
+  [{b:-1,d:1,o:-1,r:288,sX:9,sY:9},{b:1000,d:900,x:-1400,y:-660,o:1,r:-288,sX:-9,sY:-9,e:{r:6}},{b:1900,d:1600,x:-200,o:-1,e:{x:16}}]
+  ];
+
+  var jssor_7_options = {
+    $AutoPlay: true,
+    $SlideDuration: 800,
+    $SlideEasing: $Jease$.$OutQuint,
+    $CaptionSliderOptions: {
+      $Class: $JssorCaptionSlideo$,
+      $Transitions: jssor_7_SlideoTransitions
+    },
+    $ArrowNavigatorOptions: {
+      $Class: $JssorArrowNavigator$
+    },
+    $BulletNavigatorOptions: {
+      $Class: $JssorBulletNavigator$
+    }
+  };
+
+  var jssor_7_slider = new $JssorSlider$("jssor_7", jssor_7_options);
+
+  /*responsive code begin*/
+  /*you can remove responsive code if you don't want the slider scales while window resizing*/
+  function ScaleSlider() {
+    var refSize = jssor_7_slider.$Elmt.parentNode.clientWidth;
+    if (refSize) {
+      refSize = Math.min(refSize, 1920);
+      jssor_7_slider.$ScaleWidth(refSize);
+    }
+    else {
+      window.setTimeout(ScaleSlider, 30);
+    }
+  }
+  ScaleSlider();
+  $(window).bind("load", ScaleSlider);
+  $(window).bind("resize", ScaleSlider);
+  $(window).bind("orientationchange", ScaleSlider);
+  /*responsive code end*/
+});
